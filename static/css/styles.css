@@ -1,0 +1,133 @@
+/* static/css/styles.css */
+
+/* Reset y tipografía */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* ----- Layout general ----- */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Main ocupará el espacio disponible */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #fefefe;
+}
+
+/* ----- Formulario base (vertical) ----- */
+form {
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+/* Cada campo del formulario */
+form p {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+/* Labels */
+form label {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Inputs */
+form input {
+    width: 100%;
+    padding: 0.6rem 0.7rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+form input:focus {
+    border-color: #4f46e5;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+}
+
+/* Botón */
+form button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+form button:hover {
+    background-color: #3730a3;
+}
+
+/* ----- Mensajes de error y éxito ----- */
+form span.error {
+    color: red;
+    font-size: 0.85rem;
+}
+
+.success {
+    color: green;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* ----- Navbar ----- */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    background-color: #4f46e5;
+    padding: 1rem 0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.2s ease;
+}
+
+.navbar a:hover {
+    color: #dcdcff;
+}
+
+/* ----- Footer ----- */
+.footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #f3f3f3;
+    color: #555;
+    border-top: 1px solid #ddd;
+}
