@@ -2,17 +2,25 @@
 <html lang="ca">
 <head>
     <meta charset="UTF-8">
-    <title>Projecte Django Users</title>
+    <title>{% block title %}Autenticació{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-
-    <h1>Projecte RA4-RA5</h1>
-
-    <nav>
-
+    <nav class="navbar">
+        <a href="{% url 'login' %}">Login</a>
+        <a href="{% url 'register' %}">Registre</a>
     </nav>
 
-    {% block content %}
-    {% endblock %}
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Desenvolupament Web</p>
+    </footer>
+
+    <!-- AQUI FALTABA ESTO -->
+    {% block scripts %}{% endblock %}
 </body>
 </html>

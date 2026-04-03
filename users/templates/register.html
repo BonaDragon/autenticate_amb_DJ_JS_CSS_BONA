@@ -1,14 +1,16 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
-<h2>Registro</h2>
-<form method="post">
+
+<form method="post" class="long-form" novalidate>
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Registrar</button>
+    <button type="submit">Register</button>
 </form>
 
-{% for message in messages %}
-<p style="color:green">{{ message }}</p>
-{% endfor %}
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'js/register.js' %}" defer></script>
 {% endblock %}
