@@ -4,6 +4,7 @@ from django.contrib import messages
 
 def home(request):
     return render(request, "base.html")
+
 def register(request):
     if request.method == "POST":
         form = RegisterForm(request.POST)
